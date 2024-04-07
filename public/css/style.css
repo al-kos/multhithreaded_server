@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --mainBgColor-light:rgb(249, 250,251);
+
+  --mainTextColor-dark:#fff;
+  --secondaryTextColor-dark:#adb0b1;
+  --mainLinkColor-dark:rgb(30, 190,214);
+  --mainBorderColor-dark:#2b3031;
+  --mainBgColor-dark:#131415;
+    
+  --mainTextColor:var(--mainTextColor-dark);
+  --secondaryTextColor:var(--secondaryTextColor-dark);
+  --mainLinkColor:var(--mainLinkColor-dark);
+  --mainBorderColor:var(--mainBorderColor-dark);
+  --mainBgColor:var(--mainBgColor-dark);
+}
+
+*{
+    font-family: 'Readex Pro';
+    line-height: 1.2em;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--mainBgColor);
+    color: var(--mainTextColor);
+}
+
+a, li{
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  list-style-type: none
+}
+
+.container {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+  color: var(--secondaryTextColor);
+  font-size: 1em;
+}
+
+.input-block { grid-area: input-block; }
+
+.sort-block { grid-area: sort-block; }
+
+.search-block { grid-area: search-block; }
+
+.text-result-block { grid-area: text-result-block; }
+
+.grafic-result-block { grid-area: grafic-result-block; }
+
+.qr-card {
+  min-width: 250px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background: var(--mainBgColor);
+  border: 3px solid var(--mainLinkColor);
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.qr-card input {
+  width: 100%;
+  height: 2em;
+  border: 3px solid var(--mainLinkColor);
+  outline: 0;
+  padding: 1em;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+}
+
+.qr-card button {
+  width: 100%;
+  height: 3em;
+  background: var(--mainBgColor);
+  color: var(--mainLinkColor);
+  border: 0.4px solid var(--mainLinkColor);
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.qr-card button:hover {
+  background: var(--mainBgColor-light);
+}
+
+#imgBox {
+width: 200px;
+min-height: 0;
+overflow: hidden;
+}
+
+#imgBox img {
+  width: 100%;
+  padding: 10px;
+}
+
+#imgBox.show-img {
+  max-height: 300px;
+  margin: 10px auto;
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0%{
+    transform:  translateX(0);
+  }
+  25%{
+    transform:  translateX(-2px);
+  }
+  50%{
+    transform:  translateX(0);
+  }
+  75%{
+    transform:  translateX(2px);
+  }
+  100%{
+    transform:  translateX(0);
+  }
+}
